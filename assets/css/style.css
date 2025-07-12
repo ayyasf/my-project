@@ -155,7 +155,7 @@ nav li a:hover{
 }
 /*Categories  Section Styling  */
 .h-container{
-    padding-top:56px;
+    padding-top:70px;
 }
 #Categories .card{
     display:flex;
@@ -174,6 +174,7 @@ nav li a:hover{
     align-items: center;
     gap:24px;
     padding:57px 0;
+    transition: box-shadow 0.4s ease;
 }
 #Categories .card .card-item:hover{
     box-shadow:4px 4px 10px #0000001A;
@@ -247,7 +248,6 @@ nav li a:hover{
     color:#fff;
 }
 #Featured-courses .box{
-    /* width: 385px; */
     display:flex;
     flex-wrap:wrap ;
     /* grid-template-columns: repeat(3, 385px); */
@@ -473,7 +473,7 @@ nav li a:hover{
 #plog .articles{
     display:grid;
     grid-template-columns: repeat(3, 385px);
-    gap:35px;
+    gap:26px;
 } 
 #plog .articles .article-card{
     border: 1px solid #EAEAEA;
@@ -616,15 +616,24 @@ footer p{
         font-size:32px;
     }
     /* Sections */
-    #addons,
+    /* #addons,
     #skills ,
     #information{
-        padding:50px;
-    }
+        padding:30px;
+    } */
+    #Categories ,
+    #Featured-courses,
+    #LearnPress ,
+    #addons ,
+    #skills ,
+    #profile ,
+    #information  {
+    padding:30px;
+}
     .page ,
     #plog , 
     #user-accsess{
-        padding:50px 20px;
+        padding:50px 30px;
     }
     #Categories .card ,
     #addons .add-items ,
@@ -639,6 +648,9 @@ footer p{
         justify-content: center;
         align-items: center;
     }
+    #Featured-courses .box {
+        max-width:385px;
+    }
     .desktopbtn{
         display: none;
     }
@@ -647,10 +659,15 @@ footer p{
         margin:35px auto;
     }
     /* Courses Section */
+    #Featured-courses .box {
+        justify-content: center;
+        align-items: center;
+    }
     #Featured-courses .text , 
     #plog .text{
         flex-direction:column;
         gap:32px;
+        justify-content: center;
     }
     /*plog Sections  */
     #plog .articles { 
