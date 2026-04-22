@@ -7,16 +7,17 @@
 :root{
     --primary-color: #FF782D;
     --secondary-color:#555555;
-    --secondary-font:"Jost" , sans-serif;
+    --secondary-font:"Jost", sans-serif;
 }
-/* Utility Classes */
+/* Utility Buttons */
 .btn-primary{
     width:170px;
     height:48px;
     border:none;
     border-radius:24px;
     background-color: var(--primary-color);
-    color:#FFFFFF;
+    color:#fff;
+    cursor: pointer;
 }
 .btn-secondary{
     width:161px;
@@ -24,90 +25,180 @@
     border: 1px solid #9D9D9D;
     border-radius:24px;
     background-color: #fff;
+    cursor: pointer;
 }
-/* Header Styling */
-nav{
-    position:fixed;
-    top:0;
-    width:100vw;
+/* ========================= Navbar ========================== */
+nav {
+    position: fixed;
+    top: 0;
+    width: 100vw;
     display: flex;
-    z-index: 4;
-    background-color: #fff;
     justify-content: space-between;
     align-items: center;
-    padding:0 70px;
-    height:72px;
+    padding: 0 70px;
+    height: 72px;
+    background-color: #fff;
+    z-index: 4;
 }
-nav .bars{
-    display:none;
-}
-nav ul{
+nav ul {
     display: flex;
     align-items: center;
     list-style: none;
-    gap:26px;
+    gap: 26px;
 }
-nav ul li a{
+nav ul li a {
     text-decoration: none;
-    color:#000;
+    color: #000;
+    transition: color 0.3s ease;
+    cursor: pointer;
 }
-nav li a:hover{
-    color:var(--primary-color);
+nav ul li a:hover {
+    color: var(--primary-color);
+    background-color: #f5f5f5; 
+    border-radius: 6px; 
 }
-.list-left{
-    display:flex;
+.list-left {
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
-.border-icon{
-    width:44px;
-    height:44px;
-    border:2px solid var(--primary-color);
+.border-icon {
+    width: 44px;
+    height: 44px;
+    border: 2px solid var(--primary-color);
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
 }
-.page-indicator{
-    width:100%;
-    height:60px;
-    background-color:#E6E6E6;
-    padding:70px;
-    opacity: 0;
+nav .bars {
+    display: none;
+    cursor: pointer;
 }
-.page-indicator .p-page{
-    padding:25px 0;
+nav ul li a {
+    padding: 22px 14px;
+    transition: background-color 0.3s ease; 
+}
+.breadcrumb-bar {
+    position: fixed;
+    top:64px; 
+    left: 0;
+    width: 100%;
+    height:55px; ;
+    background-color: #f5f5f5;
+    color: #555;
     display: flex;
-    gap:12px;
-}
-.page-indicator p{
-    color:#666666;
+    align-items: center;
+    gap: 8px;
+    padding: 0 70px;
     font-size: 14px;
+    z-index: 999;
 }
-.page-indicator span{
-    color:#999999;
+.breadcrumb-bar p ,.breadcrumb-bar span{
+    color:#555555;
 }
-.page-indicator a{
+.breadcrumb-bar a {
+    color: #9D9D9D;
     text-decoration: none;
-    color:#999999;
+    font-weight: 500;
 }
-.pages li a:hover .page-indicator{
-    opacity: 1;
+.breadcrumb-bar a:hover {
+    text-decoration: underline;
 }
-/* Hero Section Styling */
+/* ========================= Mobile Menu ========================== */
+.mobile-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 0;
+    background-color: #fff;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    transition: height 0.4s ease;
+    z-index: 9999;
+}
+.mobile-menu.open {
+    height: 100vh;
+} 
+.menu-header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 25px;
+}
+.menu-logo {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+}
+.close-btn {
+    font-size: 32px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #000;
+}
+.mobile-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0 40px;
+    width: 100%;
+}
+.mobile-menu li a {
+    width: 100%;
+    text-align: left;
+    padding: 20px 0 20px 35px;
+    border-bottom: 1px solid #eee;
+    transition: all 0.3s ease, color 0.3s ease;
+}
+.mobile-menu li a:hover {
+    background-color: #f0eded;
+    color: var(--primary-color);
+}
+.mobile-menu a {
+    text-decoration: none;
+    color: #000;
+    font-size: 20px;
+    font-weight: 500;
+    display: block;
+    width: 100%;
+}
+.login-btn{
+    text-align: center;
+    margin: 20px 0;
+}
+.login-btn a {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: #fff;
+    padding: 12px 35px;
+    border-radius: 30px;
+    font-size: 18px;
+    transition: background 0.3s ease;
+}
+/* ========================= Hero Section ========================== */
 .hero{
     position: relative;
     top: 72px;
     background-image:url(./../img/header-bg.png);
     background-repeat: no-repeat;
-    background-size:cover;
+    background-size: cover;
     width: 100%;
     height: 577px;
+    display: flex;
+    align-items: flex-start;
 }
 .hero .description{
     padding:157px 70px 0;
     max-width:520px;
 }
 .hero h1{
-    max-width:520px; 
+    max-width:520px;
     font-size:48px;
     font-weight:600;
     color:#000;
@@ -119,227 +210,293 @@ nav li a:hover{
     margin:24px 0 20px;
     font-family:var(--secondary-font);
 }
-/*  sections */
-#Categories ,
-#Featured-courses,
-#LearnPress ,
-#addons ,
-#skills ,
-#profile ,
-#information ,
-#plog ,
-#user-accsess {
-    padding:70px;
+/* ========================= sections ======================== */
+.section-padding{
+    padding: 70px;
 }
-#Categories .text ,
-#Featured-courses .text ,
-#plog .text{ 
-    padding-bottom:50px;
+.section-padding-extra{
+    padding: 170px 70px  70px;
+}
+/* ========================= Categories Section Styling ======================== */
+#Categories {
+    background-color: #f9f9f9;
+}
+#Categories .text {
+    padding-bottom: 50px;
     display: flex;
-    justify-content:space-between;
-}
-#Categories .text .title h2 ,
-#Featured-courses .text .title h2 ,
-#plog .text .title h2{
-    font-size:32px;
-    font-weight: 600;
-    color:#000;
-}
-#Categories .text .title p ,
-#Featured-courses .text .title p{
-    width:259px;
-    color:var(--secondary-color);
-    font-size:18px;
-    padding-top:12px;
-    font-family: var(--secondary-font);
-}
-/*Categories  Section Styling  */
-.h-container{
-    padding-top:56px;
-}
-#Categories .card{
-    display:flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap:wrap;
-    gap:30px;
-}
-#Categories .card .card-item{
-    width:234px;
-    border:1px solid #EAEAEA;
-    border-radius:20px;
-    display: flex;
-    flex-direction:column;
-    justify-content: center;
-    align-items: center;
-    gap:24px;
-    padding:57px 0;
-}
-#Categories .card .card-item:hover{
-    box-shadow:4px 4px 10px #0000001A;
-}
-#Categories .card .card-item h3{
-    font-weight: 600;
-    font-size:20px;
-}
-#Categories .card .card-item:hover h3{
-    color:var(--primary-color)
-}
-#Categories .card .card-item p{
-    font-weight:400;
-    font-size:18px;
-    color:var(--secondary-color);
-    font-family: var(--secondary-font);
-}
-.mobilebtn{
-    display:none;
-}
-/* section  Featured-courses  styling*/
-.search-menue{
-    display: flex;
-    gap:20px;
-    align-items: center;
-}
-.search-menue .icon{
-    font-size:20px;
-    color:#000;
-}
-.search-menue .icon:hover{
-    color:var(--primary-color);
-}
-.search-menue input{
-    width:270px;
-    height:40px;
-    outline: none;
-    border: none;
-    border-bottom:1px solid #000 ;
-    width:270px;
-    height:40px;
-}
-.search-menue input::placeholder{
-    padding:0;
-    padding-bottom: 16px;
-    font-family:var(--secondary-color);
-    font-size: 18px;
-}
-/* Navigation styling  */
-.navigation {
-    padding:70px;
-    display:flex;
-    justify-content: center;
-    align-items: center;
-    gap:12px;
-}
-.navigation .item{
-    display:flex;
-    align-items: center;
-    justify-content: center;
-    width:48px;
-    height:48px;
-    border:1px solid #EAEAEA ;
-    border-radius:50%;
-    font-size:18px;
-    font-family:var(--secondary-font);
-    font-weight: 500;
-}
-.navigation .item:hover{
-    background-color:#000 ;
-    color:#fff;
-}
-#Featured-courses .box{
-    /* width: 385px; */
-    display:flex;
-    flex-wrap:wrap ;
-    /* grid-template-columns: repeat(3, 385px); */
-    gap:24px;
-}
-#Featured-courses .box .box-item{
-    border: 1px solid #EAEAEA;
-    position:relative;
-    border-radius:20px;
-}
-#Featured-courses .box .box-item .course{
-    border-radius:20px 20px 0 0;
-}
-#Featured-courses .box .box-item .bg-black{
-    position:absolute;
-    top:20px;
-    left:32px;
-    color:#FFFFFF;
-    border-radius: 8px;
-    background-color: #000;
-}
-#Featured-courses .box .box-item p{
-    padding:20px;
-    font-family: var(--secondary-color);
-}
-#Featured-courses .box .box-item span{
-        color:#555555;
-}
-#Featured-courses .box .box-item .main{
-    padding-left:20px;
-    width:345px;
-    font-size: 20px;
-    font-weight:600;
-}
-#Featured-courses .box .box-item  .details{
-    display:flex;
-    padding:20px;
-    gap:20px;
-}
-#Featured-courses .box .box-item  .info{
-    display:flex;
-    padding:20px;
     justify-content: space-between;
-    border-top:1px solid #EAEAEA;
+    flex-wrap: wrap;
+    align-items: center;
 }
-#Featured-courses .box .box-item  .info span{
-    color:#55BE24;
-    font-size:18px;
-}
-#Featured-courses .box .box-item  .info a{
-    font-weight: 500;
-    font-size:18px;
-    text-decoration: none;
-    color:#000;
-    font-family:var(--secondary-color);
-}
-/* Section LearnPress Styling */
-#LearnPress .container{
-    position: relative;
-}
-#LearnPress .text{
-    max-width:450px;
-    position:absolute;
-    top:54px;
-    left:50px;
-}
-#LearnPress .container .text p{
-    color:var(--secondary-color);
-    max-width:400px;
-}
-#LearnPress .container .text h3{
-    max-width:450px;
+#Categories .text .title h2 {
     font-size: 32px;
     font-weight: 600;
-    padding:12px 0 24px;
+    color: #000;
 }
-#LearnPress .container .desktop-photo{
-    border-radius:20px ;
+#Categories .text .title p {
+    width: 259px;
+    color: var(--secondary-color);
+    font-size: 18px;
+    padding-top: 12px;
+    font-family: var(--secondary-font);
 }
-#LearnPress .container .mobail-photo{
-    display:none;
+.h-container {
+    padding-top: 56px;
 }
-#LearnPress .container .text p.bold{
-    max-width:450px;
-    font-size:18px;
-    padding-bottom: 20px;
-    font-family:var(--secondary-font);
+#Categories .card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 30px;
 }
-/* section Addons Styling */
+#Categories .card .card-item {
+    width: 234px;
+    border: 1px solid #EAEAEA;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+    padding: 57px 0;
+    background-color: #fff;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+#Categories .card .card-item:hover {
+    box-shadow: 4px 4px 10px #0000001A;
+    transform: translateY(-5px);
+}
+#Categories .card .card-item h3 {
+    font-weight: 600;
+    font-size: 20px;
+    transition: color 0.3s ease;
+}
+#Categories .card .card-item:hover h3 {
+    color: var(--primary-color);
+}
+#Categories .card .card-item p {
+    font-weight: 400;
+    font-size: 18px;
+    color: var(--secondary-color);
+    font-family: var(--secondary-font);
+}
+/* Buttons */
+.desktopbtn {
+    display: inline-block;
+}
+.mobilebtn {
+    display: none;
+}
+/* ========================= Featured Courses Section ========================== */
+/* title*/
+#Featured-courses .text , #plog .text {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap;
+    gap: 20px;
+    padding-bottom: 50px;
+}
+#Featured-courses .text .title ,
+#plog .title {
+    flex: 1;
+}
+#Featured-courses .text .title h2,
+#plog .title h2 {
+    font-size: 32px;
+    font-weight: 600;
+    color: #000;
+}
+#Featured-courses .text .title p {
+    width: 259px;
+    color: var(--secondary-color);
+    font-size: 18px;
+    padding-top: 12px;
+    font-family: var(--secondary-font);
+}
+/*button desktop*/
+#Featured-courses .desktopbtn {
+    display: inline-block;
+}
+/* Cards */
+#Featured-courses .box,
+#plog .articles {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    justify-content: center;
+}
+#Featured-courses .box .box-item ,
+#plog .articles .article-card {
+    width: 345px;
+    border: 1px solid #EAEAEA;
+    border-radius: 20px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+#Featured-courses .box-item .course {
+    width: 100%;
+    border-radius: 20px 20px 0 0;
+}
+#Featured-courses .box-item .bg-black {
+    position: absolute;
+    top: 20px;
+    left: 32px;
+    color: #fff;
+    border-radius: 8px;
+    background-color: #000;
+    padding: 5px 10px;
+}
+#Featured-courses .box-item p {
+    padding: 20px;
+    font-family: var(--secondary-font);
+}
+#Featured-courses .box-item span {
+    color: #555555;
+}
+#Featured-courses .box-item .main {
+    padding-left: 20px;
+    width: 100%;
+    font-size: 20px;
+    font-weight: 600;
+}
+#Featured-courses .box-item .details {
+    display: flex;
+    padding: 20px;
+    gap: 20px;
+}
+#Featured-courses .box-item .info {
+    display: flex;
+    padding: 20px;
+    justify-content: space-between;
+    border-top: 1px solid #EAEAEA;
+}
+#Featured-courses .box-item .info span {
+    color: #55BE24;
+    font-size: 18px;
+}
+#Featured-courses .box-item .info a {
+    font-weight: 500;
+    font-size: 18px;
+    text-decoration: none;
+    color: #000;
+    font-family: var(--secondary-font);
+    cursor: pointer;
+}
+/* Search Menu */
+.search-menue {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+}
+.search-menue input {
+    width: 270px;
+    height: 40px;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid #000;
+    font-size: 16px;
+    font-family: var(--secondary-font);
+}
+.search-menue input::placeholder {
+    color: #777;
+    font-size: 18px;
+}
+.search-menue .icon {
+    font-size: 20px;
+    color: #000;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+.search-menue .icon:hover {
+    color: var(--primary-color);
+}
+/* Navigation */
+.navigation {
+    padding: 50px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+.navigation .item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    border: 1px solid #EAEAEA;
+    border-radius: 50%;
+    font-size: 18px;
+    font-family: var(--secondary-font);
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.navigation .item:hover {
+    background-color: #000;
+    color: #fff;
+}
+/* mobile button*/
+.mobilebtn {
+    display: none;
+}
+/* ========================= LearnPress Section ========================== */
+#LearnPress {
+    padding: 70px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+    text-align: center;
+    color: #000;
+}
+/* Content section*/
+#LearnPress .container {
+    width: 90%;
+    padding: 40px 30px;
+    background-image: url('./../img/learn.png'); 
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 20px;
+}
+#LearnPress .container .text{
+    text-align: left;
+    margin: 0;
+    max-width: 666px; 
+}
+#LearnPress .container .text p {
+    max-width: 444px;
+    color: var(--secondary-color);
+    font-size: 16px;
+    margin: 0;
+}
+#LearnPress .container .text h3 {
+    font-size: 32px;
+    font-weight: 600;
+    margin: 12px 0 24px;
+}
+#LearnPress .container .text p.bold {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+/* Button */
+#LearnPress .container .btn {
+    margin-top: 20px;
+}
+/* ========================= Addons Section Styling ========================== */
 #addons .add-items{
     display: flex;
     gap:30px;
+    justify-content: center;
+    align-items: center;
 }
 #addons .add-items .add-item{
     width:284px;
@@ -362,10 +519,19 @@ nav li a:hover{
     font-weight:500;
     font-family:var(--secondary-color);
 }
-/*section Skills styling  */
+/* ========================= section Skills styling ========================== */
+#skills{
+    padding:70px 20px;
+}
 #skills .container{
     display:flex;
-    gap:150px;
+    max-width: 88%;
+    gap:33px ;
+    margin: 0 auto;
+}
+#skills .left-conten img{
+    width:433px ; 
+    margin-right: 22px; ;
 }
 #skills .container .right-conten h3{
     max-width:420px;
@@ -392,44 +558,80 @@ nav li a:hover{
 #skills .container .right-conten .btn{
     margin-top:20px;
     }
-/*section  profile styling*/
-#profile .container{
-    position:relative;
+/* ========================= Profile Section styling ========================== */
+.Academy-lMS{
+    position: relative;
+    margin: 0 70px;
+    margin-bottom: 70px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 20px;
+    background-image: linear-gradient(to right,#C7E6F9,#E8D1FE);
+    z-index: 2;
+    }
+.Academy-lMS .banner-bg{
+        position: absolute;
+        top: 0;
+        z-index: -1;
+        width: 100%;
+        height: 100%;
+        
+    }
+.Academy-lMS .continer{
+        padding: 65px 18px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
 }
-#profile .content{
-    width: 100%;
-    position:absolute;
-    top:65px;
-    left:18px;
-    display: flex;
-    justify-content:space-between;
-    align-items: center;
+.Academy-lMS .continer  .left-content{
+        display: flex;
+        align-items: center;
+        gap: 32px;
+    }
+.continer  .left-content  .image{
+        width: 120px;
+        height: 120px;
+        border-radius: 60px;
+        background-color: rgba(255, 255, 255, 1);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        }
+.Academy-lMS h4{
+        font-size: 20px;
+        font-weight: 600;
+        font-family: "Exo", sans-serif;
+        text-align: center;
+    }
+
+.Academy-lMS .right-content{
+        display: flex;
+        align-items: center;
+        gap: 20px;
 }
-#profile .content .left-content{
-    display: flex;
-    align-items: center;
-}
-#profile .content .right-content {
-    display: flex;
-    gap:16px;
-}
-/* section information styling */
-#information{
-    display: flex;
-    gap:70px;
+/* ========================= section information styling ======================= */
+#information {
     background-color: #F5F5F5;
+}
+
+
+#information .info-cont{
+    display: flex;
+    justify-content: space-between;
 }
 #information .descrption img{
     padding-bottom:32px ;
 }
 #information .descrption p{
+    padding-bottom:22px;
     max-width:341px;
     font-size: 18px;
     color:var(--secondary-color);
     font-family: var(--secondary-font);
 }
 #information h3{
-    padding-bottom:32px;
+    padding-bottom:22px;
+    padding-right:22px;
     font-weight:600;
     font-size:20px;
 }
@@ -469,21 +671,12 @@ nav li a:hover{
 #information  .contact .social-media .icon:hover{ 
     color:var(--primary-color);
 }
-/* Section Plog Styling */
-#plog .articles{
-    display:grid;
-    grid-template-columns: repeat(3, 385px);
-    gap:35px;
-} 
-#plog .articles .article-card{
-    border: 1px solid #EAEAEA;
-    border-radius:20px;
-}
+/* ========================= section plog styling ======================= */
 #plog .articles .description{
     padding:20px;
 }
 #plog .articles h4{
-    width:345px;
+    
     font-size: 20px;
     font-weight: 600;
     padding:20px 0 16px;
@@ -499,10 +692,12 @@ nav li a:hover{
     font-family:var(--secondary-font);
     font-size: 18px;
 }
-/* User-accsee styling  */
+/* ========================= User-accsee styling ======================= */
 #user-accsess .container{
     display: flex;
     gap:30px;
+    justify-content: center;
+    align-items: center;
 }
 #user-accsess .container .login-steps ,
 #user-accsess .container .register-steps{
@@ -513,7 +708,6 @@ nav li a:hover{
     border:1px solid #EAEAEA;
     border-radius:20px;
     box-shadow: 3px 3px 8 #EAEAEA;
-
 }
 #user-accsess .container .login-steps {
     width:609px;
@@ -589,97 +783,145 @@ footer p{
     margin: 0 auto;
     color:var(--secondary-color);
 }
-@media screen and (max-width: 992px){
-    /* Navbar */
-    nav{
-        padding:30px 20px;
+/* ========================= Responsive ========================== */
+@media(max-width:992px){
+    /* Navbar Styling*/
+    nav{ 
+        padding: 0 20px;
     }
-    nav ul{
+    nav ul, .list-left{
         display:none;
-    }
-    
-    .list-left{
-        display: none;
     }
     nav .bars{
         display:block;
     }
-    /* Hero Section */
+    .breadcrumb-bar {
+        padding:0 20px;
+    }
+    /* Hero Styling*/
     .hero{
+        height: auto;
+        min-height: 400px;
+        justify-content: center;
+        align-items: center;
+        text-align:center;
+        padding:50px 20px;
         background-image: url(./../img/headerbg-res.png);
-        background-size:cover;
     }
     .hero .description{
-        padding:115px 20px ; 
+        padding:0;
     }
-    .hero h1{
-        font-size:32px;
+    .section-padding{
+        padding: 50px 20px;
     }
-    /* Sections */
-    #addons,
-    #skills ,
-    #information{
-        padding:50px;
+    .section-padding-extra {
+        padding:140px 20px 20px;
     }
-    .page ,
-    #plog , 
-    #user-accsess{
-        padding:50px 20px;
-    }
-    #Categories .card ,
-    #addons .add-items ,
-    #Featured-courses .box ,
-    #skills .container ,
-    #information ,
-    #user-accsess .container{
-        flex-direction:column;
-    }
-    /* Categories Section*/
-    #Categories .text{
-        justify-content: center;
-        align-items: center;
-    }
-    .desktopbtn{
-        display: none;
-    }
-    .mobilebtn{
-        display: block;
-        margin:35px auto;
-    }
-    /* Courses Section */
-    #Featured-courses .text , 
-    #plog .text{
-        flex-direction:column;
-        gap:32px;
-    }
-    /*plog Sections  */
-    #plog .articles { 
-        grid-template-columns:385px;
-    }
-    /* LearnPress section */
-    #LearnPress{
-        display: none;
-    }
-    /* Addons */
-    #addons .add-items{
+    /*Categories Styling*/
+    #Categories .text {
         flex-direction: column;
         align-items: center;
-        justify-content: center;
+        text-align: center;
+        gap: 20px;
     }
-    /* Skills  Section*/
-    #skills .container{
-        gap:25px;
+    .desktopbtn{
+        display: none !important;
     }
-    #skills .left-conten{
-        order:2;
+    #Categories .card ,
+    #user-accsess .container{
+        flex-direction: column;
+        align-items: center;
     }
-    /* profile Section */
-    #profile{
+    .desktopbtn {
         display: none;
     }
-    /*Information Section */
+    .mobilebtn {
+        display: block;
+        margin: 20px auto 0;
+        width: 100%;
+        max-width: 200px;
+        text-align: center;
+    }
+    /*Featured-courses Styling*/
+    #Featured-courses .text,
+    #plog .text {
+        flex-direction: column;
+        gap: 15px;
+        align-items: center;
+        text-align: center;
+    }
+    #Featured-courses h3.main-title {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+    }
+    .search-menue {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    }
+    .search-menue input {
+    width: 220px;
+    }
+    #Featured-courses .box {
+    grid-template-columns: 1fr;
+    }
+    /*navigation Styling*/
+    .navigation {
+    justify-content: center;
+    padding-top: 30px;
+    }
+    /*LearnPress Styling*/
+    #LearnPress {
+    padding: 20px 0;
+    flex-direction: column;
+    }
+    #LearnPress .container {
+        background-image: url('./../img/learnprees.png');
+        width: 100%;
+
+    }
+    #LearnPress .container .text {
+        margin: 0 auto;
+        text-align: center;
+    }
+    /* Addons Section Styling*/
+    #addons .add-items ,
     #information{
-        gap:30px;
+        flex-direction: column;
+    }
+    /*skills Section Styling*/
+        #skills .container{
+        flex-direction:column-reverse;
+    }
+    #skills .left-conten img{
+        max-width: 100%; 
+    }
+    /* Academy-lMS Section styling */
+    .Academy-lMS{
+        margin: 0 0;
+        border-radius: 0;
+    }
+    .Academy-lMS .continer{
+        padding: 74px 20px 74.18px;
+        flex-direction: column;
+        gap: 24px;
+    }     
+    .Academy-lMS .left-content,
+    .Academy-lMS .right-content{
+        flex-direction: column;
+    }
+    .Academy-lMS .left-content{
+        gap: 16px;
+    }
+    .Academy-lMS .image{
+        width: 80px;
+        height: 80px;
+    }  
+    /* Information Section Styling*/
+        #information .info-cont{
+        flex-direction: column;
     }
     /* User-accsess  section*/
     #user-accsess .container .login-steps ,
@@ -687,3 +929,4 @@ footer p{
     max-width:100%;
     }
 }
+

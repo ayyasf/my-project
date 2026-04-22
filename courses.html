@@ -14,9 +14,9 @@
     <title>Educational Plattform</title>
     </head> 
     <body>
-        <header>
+    <header>
+        <!-- Navbar Section -->
         <nav class="navbar pages">
-            <!-- Navbar Section -->
             <img src="./assets/img/LOGO.png" alt="Logo">
             <ul>
                 <li><a href="./index.html">Home</a></li>
@@ -33,17 +33,35 @@
             </div>
             <img src="./assets/img/bars.svg" alt="bars" class="bars">
             </nav>
-            <div class="page-indicator">
-                <div class="p-page">
-                <p>Homepage</p>
-                <span> > </span>
-                <a href="#">Course</a>
+            <!--mobile-menu -->
+            <div class="mobile-menu" id="mobileMenu">
+                <div class="menu-header">
+                    <img src="/assets/img/mobile.png" alt="Logo" class="menu-logo" />
+                    <button class="close-btn" id="closeBtn">×</button>
                 </div>
+            <ul>
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./courses.html">Courses</a></li>
+                <li><a href="./plog.html">Plog</a></li>
+                <li><a href="#">Premium Theme</a></li>
+            </ul>
+            <!--search-item -->
+            <div class="search-menue">
+                <input type="text" placeholder="Search">
+                <i class="fa fa-search icon"></i>
             </div>
-            </header>
-            <main>
+            <button class="btn btn-primary login-btn"><a href="./login.html">Login</a></button>
+            </div>
+            <!--breadcrumb-bar -->
+        <div class="breadcrumb-bar">
+            <p>Homepage</p>
+            <span>></span>
+            <a href="./courses.html">Courses</a>
+        </div>
+    </header>
+        <main>
             <!-- Featured-courses Section -->
-            <section id="Featured-courses" class="courses page">
+            <section id="Featured-courses" class="section-padding-extra">
                 <div class="text">
                     <div class="title">
                         <h2>All Courses</h2>
@@ -203,7 +221,8 @@
                 </div>
         </section>
         <!-- Information Section-->
-        <section id="information">
+        <section id="information" class="section-padding">
+            <div class="info-cont">
             <div class="descrption">
                 <img src="./assets/img/LOGO.png" alt="Logo">
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
@@ -211,20 +230,20 @@
                 <div class="help">
                     <h3>GET HELP</h3>
                     <ul>
-                    <li>Contact Us</li>
-                    <li>Latest Articles</li>
-                    <li>FAQ</li>
-                </ul>
+                        <li>Contact Us</li>
+                        <li>Latest Articles</li>
+                        <li>FAQ</li>
+                        </ul>
                 </div>
                 <div class="programs">
                     <h3>PROGRAMS</h3>
                     <ul>
-                    <li>Art & Design</li>
-                    <li>Business</li>
-                    <li>IT & Software</li>
-                    <li>Languages</li>
-                    <li>Programming</li>
-                    </ul>
+                        <li>Art & Design</li>
+                        <li>Business</li>
+                        <li>IT & Software</li>
+                        <li>Languages</li>
+                        <li>Programming</li>
+                        </ul>
                 </div>
                 <div class="contact">
                     <h3>CONTACT US</h3>
@@ -238,6 +257,7 @@
                         <i class="fa-brands fa-youtube icon"></i>
                     </div>
                 </div>
+                </div>
         </section>
         </main>
         <!-- Footer Section -->
@@ -246,5 +266,6 @@
     </footer>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/js/all.min.js">
     </script>
+    <script src="./assets/js/script.js"></script>
     </body> 
 </html>

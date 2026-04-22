@@ -14,38 +14,55 @@
     <title>Educational Plattform</title>
 </head>
 <body>
-    <!-- Header Section -->
     <header>
-        <!-- Navbar -->
+        <!-- Navbar Section -->
         <nav class="navbar home">
             <img src="./assets/img/LOGO.png" alt="Logo">
-            <ul>
+            <ul class="desktop-menu">
                 <li><a href="./index.html">Home</a></li>
                 <li><a href="./courses.html">Courses</a></li>
                 <li><a href="./plog.html">Plog</a></li>
-                <li><a href="./index.html">Premium Theme</a></li>
+                <li><a href="#">Premium Theme</a></li>
             </ul>
-            <div class="lisy-left">
-                <ul>
-                    <li class="login"><a href="./login.html">Login / register</a></li>
-                    <li class="border-icon"><img src="./assets/img/search.svg" alt="search icon">
-                    </li>
-                </ul>
-            </div>
-            <img src="./assets/img/bars.svg" alt="bars" class="bars">
-            </nav>
-            <!-- Hero Section -->
-            <div class="hero">
-                <div class="description">
-                    <h1>Build Skills With Online Course</h1>
-                    <p>We denounce with righteous indignation and dislike men who are so beguiled and demoralized that cannot trouble.</p>
-                    <button class="btn btn-primary">Posts comment</button>
-                </div>
-            </div>
+        <div class="list-left">
+        <ul>
+            <li class="login"><a href="./login.html">Login / register</a></li>
+            <li class="border-icon"><img src="./assets/img/search.svg" alt="search icon"></li>
+        </ul>
+    </div>
+        <img src="./assets/img/bars.svg" class="bars">
+    </nav>
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <div class="menu-header">
+            <img src="/assets/img/mobile.png" alt="Logo" class="menu-logo" />
+            <button class="close-btn" id="closeBtn">×</button>
+        </div>
+        <ul>
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="./courses.html">Courses</a></li>
+            <li><a href="./plog.html">Plog</a></li>
+            <li><a href="#">Premium Theme</a></li>
+        </ul>
+        <!--search item -->
+    <div class="search-menue">
+        <input type="text" placeholder="Search">
+        <i class="fa fa-search icon"></i>
+    </div>
+    <button class="btn btn-primary login-btn"><a href="./login.html">Login</a></button>
+    </div>
     </header>
     <main>
-        <!--Categories section  -->
-        <section id="Categories">
+        <!-- Hero Section -->
+        <div class="hero">
+            <div class="description">
+                <h1>Build Skills With Online Course</h1>
+                <p>We denounce with righteous indignation and dislike men who are so beguiled and demoralized that cannot trouble.</p>
+                <button class="btn btn-primary">Posts comment</button>
+            </div>
+        </div>
+    <!--Categories section -->
+        <section id="Categories" class="section-padding">
             <div class='h-container'>
                 <div class="text">
                     <div class="title">
@@ -99,13 +116,13 @@
             <button class="mobilebtn btn-secondary">All categories</button>
         </div>
         </section>
-        <!--Featured-courses Section  -->
-            <section id="Featured-courses" class="courses">
-                    <div class="text">
-                        <div class="title">
-                            <h2>Featured courses</h2>
-                            <p>Explore our Popular Courses</p>
-                    </div>
+        <!-- Featured-courses Section --> 
+        <section id="Featured-courses" class="section-padding">
+            <div class="text">
+                <div class="title">
+                    <h2>Featured courses</h2>
+                    <p>Explore our Popular Courses</p>
+                </div>
                 <button class="desktopbtn btn-secondary">All Courses</button>
                 </div>
                 <div class="box">
@@ -179,12 +196,10 @@
                 </div>
             </div>
             <button class="mobilebtn btn-secondary">All Courses</button>
-        </section>
-        <!-- LearnPress Section -->
+        </section> 
+        <!--LearnPress Section --> 
         <section id="LearnPress">
             <div class="container">
-                <img src="./assets/img/learn.png" alt="learnpress" class="desktop-photo">
-                <img src="./assets/img/learnprees.png" alt="learnprees-bg" class="mobail-photo">
                 <div class="text">
                     <p>GET MORE POWER FROM</p>
                     <h3>LearnPress Add-Ons</h3>
@@ -193,8 +208,8 @@
                 </div>
             </div>
         </section>
-        <!-- Addons Section -->
-        <section id="addons">
+        <!--Addons Section --> 
+        <section id="addons" class="section-padding">
             <div class="add-items">
                 <div class="add-item">
                     <h3>25K+</h3>
@@ -214,6 +229,7 @@
             </div>
             </div>
         </section>
+        <!--skills Section --> 
         <section id="skills">
             <div class="container">
                 <div class="left-conten">
@@ -241,29 +257,30 @@
                     <button class="btn btn-primary">Explorer course</button>
                 </div>
             </div>
-        </section>
-        <!-- Profile Section -->
-        <section id="profile">
-            <div class="container">
-            <img src="./assets/img/profile.jpg" alt="profile" class="profilebg">
-                <div class="content">
-                    <div class="left-content">
-                        <img src="./assets/img/student1.png" alt="profile-student">
-                        <p>Let’s Start With Academy LMS</p>
+    </section>
+    <!------------Academy LMS--------------->
+        <section class="Academy-lMS">
+            <div class="continer">
+                <div class="left-content">
+                    <div class="image">
+                        <img src="assets/img/student1.png" alt="student">
                     </div>
-                    <div class="right-content">
-                        <button class="btn btn-secondary">I’m a student</button>
-                        <button class="btn btn-primary">Become an Instructor</button>
-                    </div>
+                    <h4>Let’s Start With Academy LMS</h4>
+                </div>
+                <div class="right-content">
+                    <button class="btn btn-secondary ">I’m a student</button>
+                    <button class="btn btn-primary">Become an Instructor</button>
                 </div>
             </div>
+                <img class="banner-bg" src="assets/img/maskabg.png" alt="banner">
         </section>
-        <!-- Information Section-->
-        <section id="information">
-            <div class="descrption">
-                <img src="./assets/img/LOGO.png" alt="Logo">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-            </div>
+        <!--Information Section--> 
+        <section id="information" class="section-padding">
+            <div class="info-cont">
+                <div class="descrption">
+                    <img src="./assets/img/LOGO.png" alt="Logo">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                </div>
                 <div class="help">
                     <h3>GET HELP</h3>
                     <ul>
@@ -294,13 +311,15 @@
                         <i class="fa-brands fa-youtube icon"></i>
                     </div>
                 </div>
+                </div>
         </section>
-    </main>
+    </main> 
     <!-- Footer Section -->
     <footer>
         <p>Copyright © 2024 LearnPress LMS | Powered by ThimPress</p>
     </footer>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/js/all.min.js">
     </script>
+    <script src="./assets/js/script.js"></script>
 </body>
 </html>
