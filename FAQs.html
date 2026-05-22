@@ -3,14 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- css link -->
     <link rel="stylesheet" href="./assets/css/style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600;900&display=swap" rel="stylesheet">
+    <!-- font jost link -->
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;600;900&display=swap" rel="stylesheet">
+    <!-- font exo link -->
     <link href="https://fonts.googleapis.com/css2?family=Exo:wght@400;600;900&display=swap" rel="stylesheet">
+    <!-- font awesome link -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
-    <title>Login - Educational Platform</title>
+    <title>Educational Plattform</title>
 </head>
 <body>
     <header>
+    <!-- Navbar Section -->
     <nav class="navbar home">
         <img src="./assets/img/LOGO.png" alt="Logo">
             <ul class="desktop-menu">
@@ -35,7 +40,7 @@
         </div>
         <img src="./assets/img/bars.svg" class="bars">
     </nav>
-<!-- Mobile Menu -->
+    <!-- Mobile Menu -->
     <div class="mobile-menu" id="mobileMenu">
         <div class="menu-header">
             <img src="/assets/img/mobile.png" alt="Logo" class="menu-logo" />
@@ -55,46 +60,76 @@
         </div>
         <button class="btn btn-primary login-btn"><a href="./login.html">Login</a></button>
     </div>
-        <div class="breadcrumb-bar">
-            <p>Homepage</p>
-            <span>></span>
-            <a href="./login.html">Login</a>
-        </div>
+    <div class="breadcrumb-bar">
+        <p>Homepage</p>
+        <span>></span>
+        <a href="/FAQs.html">FAQs</a>
+    </div>
     </header>
-
     <main>
-        <section id="user-accsess" class="section-padding-extra">
-            <div class="container">
-                <div class="login-steps">
-                    <h3>Login</h3>
-                    <form>
-                        <input type="text" placeholder="Email or username*" required>
-                        <input type="password" placeholder="Password*" required>
-                        <div class="chekbox-group">
-                            <input type="checkbox" id="remember">
-                            <label for="remember">Remember me</label>
-                        </div>
-                        <button class="login">Login</button>
-                    </form>
-                    <a href="#" class="link">Lost your password?</a>
-                    <p>Don't have an account? <a href="./register.html" class="link">Register here</a></p>
+        <section id="FAQs" class="section-padding-extra">
+            <div class="extra-container">
+                <div class="title">
+                    <h1>FAQs</h1>
                 </div>
+                <div class="container">
+                    <div class="content-left">
+                        <div class="text">
+                            <p>What Does Royalty Free Mean?</p>
+                            <i class="fa-solid fa-chevron-down icon"></i>
+                        </div>
+                        <div class="card">
+                            <div class="card-text">
+                                <p>What Does Royalty Free Mean?</p>
+                                <i class="fa-solid fa-chevron-down icon"></i>
+                            </div>
+                            <p class="des">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras facilisis faucibus odio arcu duis dui, adipiscing facilisis. Urna, donec turpis egestas volutpat. Quisque nec non amet quis. Varius tellus justo odio parturient mauris curabitur lorem in.</p>
+                        </div>
+                        <div class="text">
+                            <p>What Does Royalty Free Mean?</p>
+                            <i class="fa-solid fa-chevron-down icon"></i>
+                        </div>
+                        <div class="text">
+                            <p>What Does Royalty Free Mean?</p>
+                            <i class="fa-solid fa-chevron-down  icon"></i>
+                        </div>
+                    </div>
+                    <div class="content-right">
+                        <div class="text">
+                            <p>What Does Royalty Free Mean?</p>
+                            <i class="fa-solid fa-chevron-down icon"></i>
+                        </div>
+                        <div class="text">
+                            <p>What Does Royalty Free Mean?</p>
+                            <i class="fa-solid fa-chevron-down icon"></i>
+                        </div>
+                        <div class="text">
+                            <p>What Does Royalty Free Mean?</p>
+                            <i class="fa-solid fa-chevron-down icon"></i>
+                        </div>
+                        <div class="text">
+                            <p>What Does Royalty Free Mean?</p>
+                            <i class="fa-solid fa-chevron-down icon"></i>
+                        </div>
+                    </div>
+                </div>
+                <img src="./assets/img/faqsSection.png" alt="faqs-img" class="faqs-img">
             </div>
         </section>
-
+         <!--Information Section--> 
         <section id="information" class="section-padding">
-            <div class="info-cont">
-                <div class="descrption">
-                    <img src="./assets/img/LOGO.png" alt="Logo">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                </div>
+                <div class="info-cont">
+                    <div class="descrption">
+                        <img src="./assets/img/LOGO.png" alt="Logo">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    </div>
                 <div class="help">
                     <h3>GET HELP</h3>
                     <ul>
                         <li>Contact Us</li>
                         <li>Latest Articles</li>
                         <li>FAQ</li>
-                    </ul>
+                        </ul>
                 </div>
                 <div class="programs">
                     <h3>PROGRAMS</h3>
@@ -104,12 +139,12 @@
                         <li>IT & Software</li>
                         <li>Languages</li>
                         <li>Programming</li>
-                    </ul>
+                        </ul>
                 </div>
                 <div class="contact">
                     <h3>CONTACT US</h3>
                     <p>Address: 2321 New Design Str, Lorem Ipsum10 Hudson Yards, USA</p>
-                    <p class="tel">Tel: + (123) 2500-567-8988 Mail: supportlms@gmail.com</p>
+                    <p class="tel">Tel: + (123) 2500-567-8988Mail: supportlms@gmail.com</p>
                     <div class="social-media">
                         <i class="fa-brands fa-facebook-f icon"></i>
                         <i class="fa-brands fa-pinterest-p icon"></i>
@@ -118,7 +153,7 @@
                         <i class="fa-brands fa-youtube icon"></i>
                     </div>
                 </div>
-            </div>
+                </div>
         </section>
     </main>
     <footer>
@@ -126,4 +161,3 @@
     </footer>
     <script src="./assets/js/script.js"></script>
 </body>
-</html>

@@ -3,14 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- css link -->
     <link rel="stylesheet" href="./assets/css/style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600;900&display=swap" rel="stylesheet">
+    <!-- font jost link -->
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;600;900&display=swap" rel="stylesheet">
+    <!-- font exo link -->
     <link href="https://fonts.googleapis.com/css2?family=Exo:wght@400;600;900&display=swap" rel="stylesheet">
+    <!-- font awesome link -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
-    <title>Login - Educational Platform</title>
+    <title>Educational Plattform</title>
 </head>
 <body>
     <header>
+    <!-- Navbar Section -->
     <nav class="navbar home">
         <img src="./assets/img/LOGO.png" alt="Logo">
             <ul class="desktop-menu">
@@ -35,7 +40,7 @@
         </div>
         <img src="./assets/img/bars.svg" class="bars">
     </nav>
-<!-- Mobile Menu -->
+    <!-- Mobile Menu -->
     <div class="mobile-menu" id="mobileMenu">
         <div class="menu-header">
             <img src="/assets/img/mobile.png" alt="Logo" class="menu-logo" />
@@ -55,37 +60,70 @@
         </div>
         <button class="btn btn-primary login-btn"><a href="./login.html">Login</a></button>
     </div>
-        <div class="breadcrumb-bar">
-            <p>Homepage</p>
-            <span>></span>
-            <a href="./login.html">Login</a>
-        </div>
+    <div class="breadcrumb-bar">
+        <p>Homepage</p>
+        <span>></span>
+        <a href="/contact.html">Contact</a>
+    </div>
     </header>
-
     <main>
-        <section id="user-accsess" class="section-padding-extra">
+        <section id="contact" class="section-padding-extra">
             <div class="container">
-                <div class="login-steps">
-                    <h3>Login</h3>
-                    <form>
-                        <input type="text" placeholder="Email or username*" required>
-                        <input type="password" placeholder="Password*" required>
-                        <div class="chekbox-group">
-                            <input type="checkbox" id="remember">
-                            <label for="remember">Remember me</label>
+                <div class="left-content">
+                    <h1>Need a direct line?</h1>
+                    <p class="des">Cras massa et odio donec faucibus in. Vitae pretium massa dolor ullamcorper lectus elit quam.</p>
+                    <div class="contact number">
+                        <div class="icon">
+                            <img src="./assets/img/contact.png">
                         </div>
-                        <button class="login">Login</button>
-                    </form>
-                    <a href="#" class="link">Lost your password?</a>
-                    <p>Don't have an account? <a href="./register.html" class="link">Register here</a></p>
+                        <div class="info">
+                            <p class="first-info">Phone</p>
+                            <p class="sec-info">(123) 456 7890</p>
+                        </div>
+                    </div>
+                    <div class="contact email">
+                        <div class="icon">
+                            <img src="./assets/img/email.svg">
+                        </div>
+                        <div class="info">
+                            <p class="first-info">Email</p>
+                            <p class="sec-info">contact@thimpress.com</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="right-content">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d25980.49060031692!2d35.767206467171306!3d35.51512387025234!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1526ac2d61d4607d%3A0x8e325bf8a14195de!2sLatakia%2C%20Syria!5e0!3m2!1sen!2snl!4v1778831336194!5m2!1sen!2snl" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
             </div>
         </section>
+        <section id="contactUs" class="section-padding">
+            <div class="title">
+                <h2>Contact us</h2>
+                <p>Your email address will not be published. Required fields are marked *</p>
+            </div>
+            <div class="container">
+                <div class="contact-form">
+                    <div class="inputs">
+                        <input type="text" placeholder="Name*">
+                        <input type="text" placeholder="Email*">
+                    </div>
+                    <div class="text-area">
+                        <textarea name="Comment">Comment</textarea>
+                    </div>
+                </div>
+                <div class="chekbox-group save">
+                    <input type="checkbox" id="save">
+                    <label for="save">Save my name, email in this brower for the next time I comment</label>
+                </div>
+                <button class="btn btn-primary">Posts comment</button>
+            </div>
+        </section>
 
-        <section id="information" class="section-padding">
-            <div class="info-cont">
-                <div class="descrption">
-                    <img src="./assets/img/LOGO.png" alt="Logo">
+    <!-- information -->
+    <section id="information" class="section-padding">
+        <div class="info-cont">
+            <div class="descrption">
+                <img src="./assets/img/LOGO.png" alt="Logo">
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                 </div>
                 <div class="help">
@@ -94,7 +132,7 @@
                         <li>Contact Us</li>
                         <li>Latest Articles</li>
                         <li>FAQ</li>
-                    </ul>
+                        </ul>
                 </div>
                 <div class="programs">
                     <h3>PROGRAMS</h3>
@@ -104,12 +142,12 @@
                         <li>IT & Software</li>
                         <li>Languages</li>
                         <li>Programming</li>
-                    </ul>
+                        </ul>
                 </div>
                 <div class="contact">
                     <h3>CONTACT US</h3>
                     <p>Address: 2321 New Design Str, Lorem Ipsum10 Hudson Yards, USA</p>
-                    <p class="tel">Tel: + (123) 2500-567-8988 Mail: supportlms@gmail.com</p>
+                    <p class="tel">Tel: + (123) 2500-567-8988Mail: supportlms@gmail.com</p>
                     <div class="social-media">
                         <i class="fa-brands fa-facebook-f icon"></i>
                         <i class="fa-brands fa-pinterest-p icon"></i>
@@ -118,12 +156,11 @@
                         <i class="fa-brands fa-youtube icon"></i>
                     </div>
                 </div>
-            </div>
+                </div>
         </section>
     </main>
     <footer>
         <p>Copyright © 2024 LearnPress LMS | Powered by ThimPress</p>
     </footer>
     <script src="./assets/js/script.js"></script>
-</body>
-</html>
+</body>>

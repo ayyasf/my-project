@@ -15,44 +15,52 @@
     </head> 
     <body>
     <header>
-        <!-- Navbar Section -->
-        <nav class="navbar pages">
-            <img src="./assets/img/LOGO.png" alt="Logo">
-            <ul>
+    <!-- Navbar Section -->
+    <nav class="navbar home">
+        <img src="./assets/img/LOGO.png" alt="Logo">
+            <ul class="desktop-menu">
                 <li><a href="./index.html">Home</a></li>
                 <li><a href="./courses.html">Courses</a></li>
                 <li><a href="./plog.html">Plog</a></li>
-                <li><a href="./index.html">Premium Theme</a></li>
-            </ul>
-            <div class="lisy-left">
-                <ul>
-                    <li  class="login"><a href="./login.html">Login / register</a></li>
-                    <li class="border-icon"><img src="./assets/img/search.svg" alt="search icon">
-                    </li>
+        <!-- Dropdown -->
+                <li class="dropdown">
+                    <a href="#">Page <i class="fa-solid fa-chevron-down"></i></a>
+                <ul class="dropdown-menu">
+                    <li><a href="./contact.html">Contact</a></li>
+                    <li><a href="./faqs.html">FAQs</a></li>
                 </ul>
-            </div>
-            <img src="./assets/img/bars.svg" alt="bars" class="bars">
-            </nav>
-            <!--mobile-menu -->
-            <div class="mobile-menu" id="mobileMenu">
-                <div class="menu-header">
-                    <img src="/assets/img/mobile.png" alt="Logo" class="menu-logo" />
-                    <button class="close-btn" id="closeBtn">×</button>
-                </div>
-            <ul>
-                <li><a href="./index.html">Home</a></li>
-                <li><a href="./courses.html">Courses</a></li>
-                <li><a href="./plog.html">Plog</a></li>
+                </li>
                 <li><a href="#">Premium Theme</a></li>
+                </ul>
+        <div class="list-left">
+            <ul>
+                <li class="login"><a href="./login.html">Login / register</a></li>
+                <li class="border-icon"><img src="./assets/img/search.svg" alt="search icon"></li>
             </ul>
-            <!--search-item -->
-            <div class="search-menue">
-                <input type="text" placeholder="Search">
-                <i class="fa fa-search icon"></i>
-            </div>
-            <button class="btn btn-primary login-btn"><a href="./login.html">Login</a></button>
-            </div>
-            <!--breadcrumb-bar -->
+        </div>
+        <img src="./assets/img/bars.svg" class="bars">
+    </nav>
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <div class="menu-header">
+            <img src="/assets/img/mobile.png" alt="Logo" class="menu-logo" />
+            <button class="close-btn" id="closeBtn">×</button>
+        </div>
+        <ul>
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="./courses.html">Courses</a></li>
+            <li><a href="./plog.html">Plog</a></li>
+            <li><a href="./contact.html">Contact</a></li>
+            <li><a href="./faqs.html">FAQs</a></li>
+            <li><a href="#">Premium Theme</a></li>
+        </ul>
+        <div class="search-menue">
+            <input type="text" placeholder="Search">
+            <i class="fa fa-search icon"></i>
+        </div>
+        <button class="btn btn-primary login-btn"><a href="./login.html">Login</a></button>
+    </div>
+        <!--breadcrumb-bar -->
         <div class="breadcrumb-bar">
             <p>Homepage</p>
             <span>></span>
